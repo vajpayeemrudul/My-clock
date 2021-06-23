@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>My clock</title>
+  <link rel="stylesheet" href="style.css">
+
+  
+</head>
+<body >
+
+  <div class="clock">
+    <div class="clock-face">
+      <div class="hand hour-hand" id="hr"></div>
+      <div class="hand min-hand" id="min"></div>
+      <div class="hand second-hand" id="sec"></div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function sdate()
+    {
+      d=new Date();
+      h=d.getHours();
+      m=d.getMinutes();
+      s=d.getSeconds();
+      hrotate=30*h + m/2;
+      mrotate=6*m;
+      srotate=6*s;
+  
+      hr.style.transform=`rotate(${hrotate}deg)`;
+      min.style.transform=`rotate(${mrotate}deg)`;
+      sec.style.transform=`rotate(${srotate}deg)`;
+    }
+       
+    setInterval(sdate,1000);
+    
+  
+    
+  </script>
+
+
+</body>
+</html>
+
+
+
